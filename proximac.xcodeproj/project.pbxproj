@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BB8BA9351DF00FE500973D15 /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BB8BA9381DF00FE500973D15 /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				BB8BA93A1DF00FEA00973D15 /* PBXTargetDependency */,
+				BB8BA93C1DF00FEA00973D15 /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		C13D4B481B086B13009F90A7 /* proximac.h in Headers */ = {isa = PBXBuildFile; fileRef = C13D4B471B086B13009F90A7 /* proximac.h */; };
 		C163FE841B09134800149D9A /* local.c in Sources */ = {isa = PBXBuildFile; fileRef = C163FE791B09134800149D9A /* local.c */; };
@@ -17,6 +32,23 @@
 		C17919201B0854380013F649 /* proximac.c in Sources */ = {isa = PBXBuildFile; fileRef = C179191F1B0854380013F649 /* proximac.c */; };
 		C17919271B0858480013F649 /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = C17919261B0858480013F649 /* tree.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB8BA9391DF00FEA00973D15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C17919111B0854380013F649 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C17919191B0854380013F649;
+			remoteInfo = proximac;
+		};
+		BB8BA93B1DF00FEA00973D15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C17919111B0854380013F649 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C163FE441B0912C300149D9A;
+			remoteInfo = "proximac-cli";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C163FE431B0912C300149D9A /* CopyFiles */ = {
@@ -182,14 +214,23 @@
 		C17919111B0854380013F649 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = jedihy;
 				TargetAttributes = {
+					BB8BA9351DF00FE500973D15 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FH9QG7ZJR9;
+						ProvisioningStyle = Automatic;
+					};
 					C163FE441B0912C300149D9A = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = FH9QG7ZJR9;
+						ProvisioningStyle = Automatic;
 					};
 					C17919191B0854380013F649 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = FH9QG7ZJR9;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -207,6 +248,7 @@
 			targets = (
 				C17919191B0854380013F649 /* proximac */,
 				C163FE441B0912C300149D9A /* proximac-cli */,
+				BB8BA9351DF00FE500973D15 /* all */,
 			);
 		};
 /* End PBXProject section */
@@ -244,10 +286,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB8BA93A1DF00FEA00973D15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C17919191B0854380013F649 /* proximac */;
+			targetProxy = BB8BA9391DF00FEA00973D15 /* PBXContainerItemProxy */;
+		};
+		BB8BA93C1DF00FEA00973D15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C163FE441B0912C300149D9A /* proximac-cli */;
+			targetProxy = BB8BA93B1DF00FEA00973D15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BB8BA9361DF00FE500973D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB8BA9371DF00FE500973D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C163FE491B0912C300149D9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -270,6 +343,8 @@
 		C163FE4A1B0912C300149D9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -298,14 +373,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -338,8 +417,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -347,6 +428,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -362,12 +444,14 @@
 		C17919241B0854380013F649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
 				INFOPLIST_FILE = proximac/Info.plist;
 				MODULE_NAME = com.csujedi.proximac;
 				MODULE_START = proximac_start;
 				MODULE_STOP = proximac_stop;
 				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csujedi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -376,12 +460,14 @@
 		C17919251B0854380013F649 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = FH9QG7ZJR9;
 				INFOPLIST_FILE = proximac/Info.plist;
 				MODULE_NAME = com.csujedi.proximac;
 				MODULE_START = proximac_start;
 				MODULE_STOP = proximac_stop;
 				MODULE_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.csujedi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -390,6 +476,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB8BA9381DF00FE500973D15 /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB8BA9361DF00FE500973D15 /* Debug */,
+				BB8BA9371DF00FE500973D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C163FE4B1B0912C300149D9A /* Build configuration list for PBXNativeTarget "proximac-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
